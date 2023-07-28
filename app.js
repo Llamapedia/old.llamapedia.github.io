@@ -144,11 +144,14 @@ function makeSystemPlayer(embed_url) {
         const dest_video = document.querySelector('#main-video');
         dest_video.setAttribute('poster', original_video.getAttribute('poster'));
         var list = original_video.getElementsByTagName('source');
-        for(let item of list) {
-            let src_tag = document.createElement('source');
-            src_tag.src = item.src;
-            dest_video.append(src_tag);
-        }
+        let src_tag = document.createElement('source');
+        src_tag.src = list[2].src;
+        dest_video.append(src_tag);
+        //for(let item of list) {
+        //    let src_tag = document.createElement('source');
+        //    src_tag.src = item.src;
+        //    dest_video.append(src_tag);
+        //}
     });
 }
 
