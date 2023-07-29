@@ -1,4 +1,5 @@
 function init() {
+    document.querySelector('img').src = urbosa_logo;
     generatePhrase();
     try {
         home();
@@ -80,6 +81,11 @@ function makeVideoThumb(rec_element) {
     img.src = og_thumb.getAttribute('data-src');
     img.alt = og_thumb.alt;
     div.append(img);
+
+    const blur = img.cloneNode();
+    blur.alt = '';
+    blur.className = 'blur-thumb';
+    div.append(blur)
     
     const h3 = document.createElement('h3');
     let og_title = rec_element.querySelector('a > div.titlethumb');

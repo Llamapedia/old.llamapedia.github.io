@@ -7,17 +7,27 @@
     <link rel="stylesheet" href="style.css">
     <script src="index.js" defer></script>
     <script src="data.js" defer></script>
+    <script src="user.js" defer></script>
 </head>
 <body onload="init()">
     <header>
         <h1 class="logo"><a href="/">fuckingXNXX</a></h1>
+        <div class="account-container">
+            <span>USER_ACC</span>&#9820;
+        </div>
         <form action="/search.html">
             <input type="text" name="q" placeholder="Search..." minlength="3" maxlength="200" required>
             <button type="submit">&#x1F50E;&#xFE0E;</button>
         </form>
     </header>
 
-    <div class="recommended-videos" id="recommendation-list">
+    <div class="index-logo-container">
+        <div class="index-logo-overlay">
+            <img class="index-logo" src="" alt="">
+        </div>
+    </div>
+
+    <div class="recommended-videos index-list" id="recommendation-list">
         <h1 class="index-welcome">Welcome on fuckingXNXX.</h1>
         <h3 class="index-welcome" id="random-tag">Today isn't the day of random.</h3>
         <!--TODO: Make thumbnail have the same dynamic border glow insteas of pure white-->
